@@ -1,4 +1,4 @@
-# 🎣 PhishBlock: A Phishing URL Detection Browser Extension
+# PhishBlock: A Phishing URL Detection Browser Extension
 
 PhishBlock is a complete machine learning project that uses a Random Forest model to detect phishing websites in real-time. The project includes a Python backend API built with Flask and a functional browser extension for live URL analysis.
 
