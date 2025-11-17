@@ -1,0 +1,95 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --url-color: #6c757d;
+    --safe-color: #1DB954;
+    --safe-bg: #e8f8ee;
+    --danger-color: #e63946;
+    --danger-bg: #fce8e6;
+    --error-color: #ffc107;
+    --error-bg: #fff9e6;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+body {
+    width: 350px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+.container {
+    padding: 20px;
+    text-align: center;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 18px;
+}
+#url-container {
+    margin: 15px 0;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+#urlDisplay {
+    font-size: 13px;
+    color: var(--url-color);
+    word-wrap: break-word;
+}
+#result-card {
+    padding: 25px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+#result-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#result-text {
+    font-size: 22px;
+    font-weight: 600;
+    display: block;
+}
+#result-message {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.legitimate {
+    background-color: var(--safe-bg);
+    border-color: var(--safe-color);
+}
+.legitimate i, .legitimate #result-text { color: var(--safe-color); }
+.phishing {
+    background-color: var(--danger-bg);
+    border-color: var(--danger-color);
+}
+.phishing i, .phishing #result-text { color: var(--danger-color); }
+.error {
+    background-color: var(--error-bg);
+    border-color: var(--error-color);
+}
+.error i, .error #result-text { color: var(--error-color); }
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 25px auto;
+    display: none;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

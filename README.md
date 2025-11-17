@@ -16,10 +16,11 @@ PhishBlock is a complete machine learning project that uses a Random Forest mode
 
 ## ✨ Features
 
--   **Real-Time Detection:** Analyze the current browser URL with a single click.
+-   **Automatic Real-Time Detection:** Automatically analyzes the current browser URL as soon as the extension is opened.
 -   **Robust Model:** Uses a Random Forest classifier trained on 11 reliably extractable URL features, achieving ~75% accuracy on a holdout test set.
+-   **Modern UI:** A clean, modern user interface provides instant, color-coded feedback on the safety of a URL.
 -   **Full End-to-End System:** A complete application with a separate frontend (browser extension) and backend (Flask API).
--   **Demonstrates Critical Debugging:** The project successfully overcame a real-world "training-serving skew" problem by reverse-engineering opaque feature logic to create a reliable prediction pipeline.
+-   **Demonstrates Critical Debugging:** The project successfully overcame a real-world "training-serving skew" problem by re-engineering the model and features to create a reliable prediction pipeline.
 
 ---
 
@@ -39,10 +40,8 @@ PhishBlock is a complete machine learning project that uses a Random Forest mode
 
 2.  **Set Up and Run the Backend:**
     ```bash
-    # Create a virtual environment
+    # Create and activate a virtual environment
     python -m venv venv
-
-    # Activate it (Windows)
     .\venv\Scripts\activate
 
     # Install required libraries
@@ -62,4 +61,4 @@ PhishBlock is a complete machine learning project that uses a Random Forest mode
 4.  **Test:**
     -   Navigate to any website.
     -   Click the PhishBlock icon in your toolbar.
-    -   Click "Check Current URL" to see the prediction.
+    -   The popup will open and **automatically** display the prediction for the current URL.

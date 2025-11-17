@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body { width: 300px; font-family: Arial, sans-serif; text-align: center; padding: 10px; }
-        #status { font-size: 16px; font-weight: bold; margin: 15px 0; }
-        .legitimate { color: green; }
-        .phishing { color: red; }
-        button { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
-    </style>
+    <!-- Link to the external Font Awesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Link to our new local stylesheet -->
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h3>PhishBlock URL Analyzer</h3>
-    <p id="urlDisplay">Loading...</p>
-    <button id="checkBtn">Check Current URL</button>
-    <div id="result"></div>
+    <div class="container">
+        <div class="header">
+            <h3><i class="fas fa-shield-alt"></i> PhishBlock Analyzer</h3>
+        </div>
+        <div id="url-container">
+            <div id="urlDisplay">Loading URL...</div>
+        </div>
+        <div id="result-card">
+            <i id="result-icon"></i>
+            <span id="result-text"></span>
+            <p id="result-message"></p>
+        </div>
+        <div class="loader" id="loader"></div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
