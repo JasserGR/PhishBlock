@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "PhishBlock",
+  "version": "1.0",
+  "description": "Checks the current URL for phishing risk.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
